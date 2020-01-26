@@ -18,8 +18,7 @@ function calculate(bool, dog, dog2) {
     return dog.eLO - 15;
 }
 function loadNewMatch(bool) {
-	console.log("3");
-	document.getElementById("left-image").style.background = "blue";
+	document.getElementById("left-image").style.backgroundImage = "url('/images/dog2')";
 }
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
