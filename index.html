@@ -2,42 +2,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="mystyle.css">
-        <script>
-        window.addEventListener('load', function() {
-            document.getElementById("left-image").onclick = function(event) {
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                    // Typical action to be performed when the document is ready:
-                    document.getElementById("demo").innerHTML = xhttp.responseText; // not helpful code
-                    }
-                };
-                xhttp.open("POST", "_ah/api/handleClick", true);
-                xhttp.send();
-            };
-        });
-
-        window.addEventListener('load', function() {
-            document.getElementById("right-image").onclick = function(event) {
-                alert("This was my senior quote");
-            };
-        });
-
-        // function loadAuthClient () {
-        //     gapi.load('auth2', initGoogleAuth);
-        // }
-
-        // function initGoogleAuth (clientId = '246383166770-1plb5f8flrikh5sh579mrcg9gvv17mha.apps.googleusercontent.com') {
-        //     gapi.auth2.init({
-        //         client_id: clientId,
-        //         scope: 'https://www.googleapis.com/auth/userinfo.email'
-        //     }).then(() => {
-        //         document.getElementById('sign-in-btn').disabled = false;
-        //     }).catch(err => {
-        //         console.log(err);
-        //     });
-        // }
-        </script>
         <title>DOGERATER</title>
         <!-- <script src="https://apis.google.com/js/platform.js?onload=loadAuthClient" async defer></script> -->
     </head>
