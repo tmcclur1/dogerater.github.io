@@ -20,7 +20,7 @@ function calculate(bool, idLeft, idRight) {
 
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
-	    document.getElementById("left-image").innerHTML = dog.ELO;
+	    document.getElementById("left-image").innerHTML = dog.eLO;
 	    setTimeout(function () {
 		setTimeout(function () {
 		    console.log(calculate(true, dog.id, dog2.id))
