@@ -3,7 +3,7 @@ var dog = {
     kValue: 30, //add ½ and floor it in order to get the lowest integer
     id: 12345678,
     eLO: 1500,
-	gamesPlayed: 10,
+    gamesPlayed: 10,
 	wPerc: 0.8,
 }
 var dog2 = {
@@ -21,14 +21,15 @@ function calculate(bool, idLeft, idRight) {
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
 	    document.getElementById("left-image").innerHTML = dog.eLO;
+		document.getElementById("right-image").innerHTML = dog2.eLO;
 	    setTimeout(function () {
-		setTimeout(function () {
-		    console.log(calculate(true, dog.id, dog2.id))
-		    setTimeout(function () {
-			console.log('3')
-		    }, 1000)
-		}, 1000)
-	    }, 1000)
+			setTimeout(function () {
+				document.getElementById("left-image").innerHTML = calculate(true, dog.id, dog2.id);
+				setTimeout(function () {
+					console.log('3')
+				}, 2000)
+			}, 2000)
+	    }, 2000)
     };
 });
 
