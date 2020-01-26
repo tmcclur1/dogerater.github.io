@@ -46,6 +46,9 @@ li {
     height: 100%;
     padding-bottom: 5%;
 }
+#left-eLO #right-eLO {
+    color: white;
+}
 #vs {
     display: inline;
 }
