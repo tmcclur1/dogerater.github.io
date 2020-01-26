@@ -20,17 +20,15 @@ function calculate(bool, idLeft, idRight) {
 
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
-        funtion handleCLick() {
-            document.getElementById("left-image").innerHTML = dog.ELO;
-            setTimeout(function () {
-                setTimeout(function () {
-                    console.log(calculate(true, dog.id, dog2.id))
-                    setTimeout(function () {
-                        console.log('3')
-                    }, 1000)
-                }, 1000)
-            }, 1000)
-        }
+	    document.getElementById("left-image").innerHTML = dog.ELO;
+	    setTimeout(function () {
+		setTimeout(function () {
+		    console.log(calculate(true, dog.id, dog2.id))
+		    setTimeout(function () {
+			console.log('3')
+		    }, 1000)
+		}, 1000)
+	    }, 1000)
     };
 });
 
