@@ -30,7 +30,7 @@ li {
 }
 #left-image {
     float: left;
-    background-image: url('images/dog1.jpeg');
+    background-image: url('/images/dog1.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
@@ -38,7 +38,7 @@ li {
 }
 #right-image {
     float: right;
-    background-image: url('images/dog2.jpeg');
+    background-image: url('/images/dog2.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
