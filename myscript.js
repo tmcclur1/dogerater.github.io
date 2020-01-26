@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
 				document.getElementById("left-image").innerHTML = calculate(true, dog, dog2);
 				document.getElementById("left-image").innerHTML = calculate(true, dog, dog2);
 				setTimeout(function () {
-					loadNewMathup(true);
+					loadNewMatchup(true);
 				}, 1000)
 			}, 1000)
 	    }, 1000)
