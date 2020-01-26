@@ -1,29 +1,55 @@
-var dog = {
-    image: "/images/dog1.jpeg",
-    kValue: 30, //add ½ and floor it in order to get the lowest integer
-    id: 12345678,
-    eLO: 1500,
-    gamesPlayed: 10,
-	wPerc: 0.8,
+class Dog {
+	constructor(rating, gamesPlayed, kFactor, wPerc, image) {
+		this.rating = rating;
+		this.gamesPlayed = gamesPlayed;
+		this.kFactor = kFactor;
+		this.wPerc = wPerc;
+		this.image = image;
+	}
+	
+	getRating() {
+		return this.rating;
+	}
+	getGamesPlayed() {
+		return this.gamesPlayed;
+	}
+	getKFactor() {
+		return this.kFactor;
+	}
+	getWPerc() {
+		return this.wPerc;
+	}
+	getImage() {
+		return this.image;
+	}
 }
-var dog2 = {
-    image: "/images/dog2.jpeg",
-    kValue: 25, //add ½ and floor it in order to get the lowest integer
-    id: 12345679,
-    eLO: 1200,
-	gamesPlayed: 4,
-	wPerc: 0.8,
-}
-
+var dog = new Dog(1500, 10, 30, 0.8, "/images/dog1.jpeg");
+// var dog = {
+//     image: "/images/dog1.jpeg",
+//     kValue: 30, //add ½ and floor it in order to get the lowest integer
+//     id: 12345678,
+//     eLO: 1500,
+//     gamesPlayed: 10,
+// 	wPerc: 0.8,
+// }
+// var dog2 = {
+//     image: "/images/dog2.jpeg",
+//     kValue: 25, //add ½ and floor it in order to get the lowest integer
+//     id: 12345679,
+//     eLO: 1200,
+// 	gamesPlayed: 4,
+// 	wPerc: 0.8,
+// }
+var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
 
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
-	    document.getElementById("left-image").innerHTML = dog.eLO;
-		document.getElementById("right-image").innerHTML = dog2.eLO;
+	    document.getElementById("left-image").innerHTML = dog.getRating();
+		document.getElementById("right-image").innerHTML = dog2.getRating();
 	    setTimeout(function () {
 			setTimeout(function () {
-				document.getElementById("left-image").innerHTML = calculate(true, dog, dog2);
-				document.getElementById("right-image").innerHTML = calculate(true, dog2, dog);
+				document.getElementById("left-image").innerHTML = calculate(true, dog.getRating(), dog2.getRating());
+				document.getElementById("right-image").innerHTML = calculate(true, dog2.getRating(), dog.getRating());
 				setTimeout(function () {
 					loadNewMatchup(true);
 				}, 1000)
@@ -40,7 +66,7 @@ window.addEventListener('load', function() {
 
 
 function calculate(bool, dog, dog2) {
-    return dog.eLO - 15;
+    return dog.getRating() - 15;
 }
 function loadNewMatchup(bool) {
 	document.getElementById("left-image").style.backgroundImage = "url('/images/dog2.jpeg')";
