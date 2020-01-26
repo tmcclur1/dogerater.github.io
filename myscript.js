@@ -6,20 +6,19 @@ class Dog {
 		this.wPerc = wPerc;
 		this.image = image;
 	}
-	
-	getRating() {
+	get rating() {
 		return this.rating;
 	}
-	getGamesPlayed() {
+	get gamesPlayed() {
 		return this.gamesPlayed;
 	}
-	getKFactor() {
+	get kFactor() {
 		return this.kFactor;
 	}
-	getWPerc() {
+	get wPerc() {
 		return this.wPerc;
 	}
-	getImage() {
+	get image() {
 		return this.image;
 	}
 }
@@ -44,12 +43,12 @@ var dog2 = new Dog(1200, 4, 25, 0.8, "/images/dog2.jpeg");
 
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
-	    document.getElementById("left-image").innerHTML = dog.getRating();
-		document.getElementById("right-image").innerHTML = dog2.getRating();
+	    document.getElementById("left-image").innerHTML = dog.rating;
+		document.getElementById("right-image").innerHTML = dog2.rating;
 	    setTimeout(function () {
 			setTimeout(function () {
-				document.getElementById("left-image").innerHTML = calculate(true, dog.getRating(), dog2.getRating());
-				document.getElementById("right-image").innerHTML = calculate(true, dog2.getRating(), dog.getRating());
+				document.getElementById("left-image").innerHTML = calculate(true, dog.rating, dog2.rating);
+				document.getElementById("right-image").innerHTML = calculate(true, dog2.rating, dog.rating);
 				setTimeout(function () {
 					loadNewMatchup(true);
 				}, 1000)
