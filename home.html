@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="otherstyle.css">
+    <script>
+        document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
+        document.querySelector('.file-submit').addEventListener('click', handleFileUploadChange);
+
+        let selectedFile;
+        handleFileUploadChange(e) {
+            selectedFile = e.target.files[0];
+        }
+
+        handleFileUploadSubmit(e) {
+
+            const uploadTask = storageRef.child(`images/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
+            uploadTask.on('state_changed', (snapshot) => {
+                // Observe state change events such as progress, pause, and resume
+            }, (error) => {
+                // Handle unsuccessful uploads
+                console.log(error);
+            }, () => {
+                //Do something once upload is complete
+                console.log('success');
+            });
+        }
+    </script>
+    </head>
+<body>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="index.html">GAME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="rankings.html">RANKINGS</a></li>
+            </ul>
+        </nav>
+        <div id="title2">
+            <h1>Home</h1>
+        </div>
+        <div id="filesubmit">
+            <input type="file" class="file-select" accept="image/*"/>
+            <button class="file-submit">UPLOAD DOGGO</button>
+        </div>
+        <div id="bios">
+            <p>
+                Tieran "Chai" McClure: Tieran has been the CEO of BOFA since 1:00 p.m. on January 25th, 2020. He enjoys underwater skydiving and freefall lawn mowing in his free time. He’s also renowned for directing several public service PSA announcements. Please show up at his house uninvited with your business inquiries.
+            </p>
+            <p>
+                Anoop "Blue Ricky" Manjal: Before working at BOFA, Anoop was a world-famous gnome hunter in Iceland. At night, Anoop can be found gliding in the sky with his local herd of flying squirrels. He is currently looking for a place to store his acorns; if you worship a vacant tree, please contact him at bing.com. 
+            </p>
+            <p>
+                Jason "Activities" Eveleth: Jason has been the CTO of BOFA since 1:01p.m. on January 25th Outside of BOFA, Jason moonlights as a stay at home tourist. Jason is looking for an oceanfront house in downtown Kansas City with precisely 13 half-bathrooms. Please contact him at @gmail.com if you know you know. 
+            </p>
+            <p>
+                Ziwen "Cleveland Z" Zhou: Ziwen is the CFO of BOFA. Please contact him, we don't know where he is.  
+            </p>
+        </div>
+        <div>
+            <h1>History</h1>
+            <p>
+                This game was created by four Brown University freshman friends who are dog lovers. It was created in less than 20 hours for Hack@Brown 2020. We hope you enjoy all these cute dog photos and learn a bit about the ELO system!
+            </p>
+        </div>
+
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+            apiKey: "AIzaSyAl7xu2UNmcB66q3lKM6asT21ILg5DPpZk",
+            authDomain: "doge-rater.firebaseapp.com",
+            databaseURL: "https://doge-rater.firebaseio.com",
+            projectId: "doge-rater",
+            storageBucket: "doge-rater.appspot.com",
+            messagingSenderId: "160606175699",
+            appId: "1:160606175699:web:6451380b06e84487016f26",
+            measurementId: "G-0XYSXBRVPK"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            const storageService = firebase.storage();
+            const storageRef = storageService.ref();
+        </script>
+
+
+
+    </body>
+</html>

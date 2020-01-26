@@ -1,0 +1,29 @@
+html, body {
+    background-color: #3399ff;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    height: 100%;
+    width: 100%
+}
+nav a {
+    text-align: center;
+    font-size: x-large;
+    font-family: sans-serif;
+    color: #ffffff;
+    margin-top: 0;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    text-align: center;
+}
+ul li {
+    display: inline;
+}
+li {
+    margin: 5%;
+}

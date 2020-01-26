@@ -1,0 +1,49 @@
+html, body {
+    background-color: #ea9efc;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    height: 100%;
+    width: 100%
+}
+nav a {
+    text-align: center;
+    font-size: x-large;
+    font-family: sans-serif;
+    color: #ffffff;
+    margin-top: 0;
+    font-style: normal;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    text-align: center;
+}
+ul li {
+    display: inline;
+}
+li {
+    margin: 5%;
+}
+#left-image {
+    float: left;
+    background-image: url('images/dog1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+}
+#right-image {
+    float: right;
+    background-image: url('images/dog2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+}
+#vs {
+    display: inline;
+}
