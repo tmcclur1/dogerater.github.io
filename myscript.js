@@ -46,7 +46,7 @@ function loadNewMatchup(bool) {
 	document.getElementById("left-image").style.backgroundImage = "url('/images/dog2.jpeg')";
 }
 function probability(oppRating){
-	return 1.0/(1.0 + Math.pow(10, (oppRating - this.rating)/400);
+	return 1.0/(1.0 + Math.pow(10, (oppRating - this.rating)/400));
 }
 function newRating(oppRating, bool){
 	if (bool) {
