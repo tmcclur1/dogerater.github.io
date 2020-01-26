@@ -19,6 +19,7 @@ function calculate(bool, dog, dog2) {
 }
 function loadNewMatch(bool) {
 	console.log("3");
+	document.getElementById("left-image").style.background = "blue";
 }
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
