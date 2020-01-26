@@ -14,19 +14,22 @@ var dog2 = {
 	gamesPlayed: 4,
 	wPerc: 0.8,
 }
-function calculate(bool, idLeft, idRight) {
-    return idLeft;
+function calculate(bool, dog, dog2) {
+    return dog.eLO - 15;
 }
-
+function loadNewMatch(bool) {
+	console.log("3");
+}
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
 	    document.getElementById("left-image").innerHTML = dog.eLO;
 		document.getElementById("right-image").innerHTML = dog2.eLO;
 	    setTimeout(function () {
 			setTimeout(function () {
-				document.getElementById("left-image").innerHTML = calculate(true, dog.id, dog2.id);
+				document.getElementById("left-image").innerHTML = calculate(true, dog, dog2);
+				document.getElementById("left-image").innerHTML = calculate(true, dog, dog2);
 				setTimeout(function () {
-					console.log('3')
+					loadNewMathup(true);
 				}, 2000)
 			}, 2000)
 	    }, 2000)
