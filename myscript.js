@@ -17,7 +17,7 @@ var dog2 = {
 function calculate(bool, dog, dog2) {
     return dog.eLO - 15;
 }
-function loadNewMatch(bool) {
+function loadNewMatchup(bool) {
 	document.getElementById("left-image").style.backgroundImage = "url('/images/dog2.jpeg')";
 }
 window.addEventListener('load', function() {
@@ -30,9 +30,9 @@ window.addEventListener('load', function() {
 				document.getElementById("left-image").innerHTML = calculate(true, dog, dog2);
 				setTimeout(function () {
 					loadNewMathup(true);
-				}, 2000)
-			}, 2000)
-	    }, 2000)
+				}, 1000)
+			}, 1000)
+	    }, 1000)
     };
 });
 
