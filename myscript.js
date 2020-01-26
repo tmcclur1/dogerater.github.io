@@ -22,8 +22,8 @@ window.addEventListener('load', function() {
 		document.getElementById("right-image").innerHTML = dog2.eLO;
 	    setTimeout(function () {
 			setTimeout(function () {
-				document.getElementById("left-image").innerHTML = calculate(true, dog, dog2);
-				document.getElementById("left-image").innerHTML = calculate(true, dog, dog2);
+				document.getElementById("left-eLO").innerHTML = calculate(true, dog, dog2);
+				document.getElementById("right-eLO").innerHTML = calculate(true, dog, dog2);
 				setTimeout(function () {
 					loadNewMatchup(true);
 				}, 1000)
