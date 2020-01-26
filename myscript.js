@@ -8,35 +8,35 @@ class Dog {
 		this.image = image;
 	}
 	get rating() {
-		return this.rating;
+		return this._rating;
 	}
 	get gamesPlayed() {
-		return this.gamesPlayed;
+		return this._gamesPlayed;
 	}
 	get kFactor() {
-		return this.kFactor;
+		return this._kFactor;
 	}
 	get wPerc() {
-		return this.wPerc;
+		return this._wPerc;
 	}
 	get image() {
-		return this.image;
+		return this._image;
 	}
-// 	set rating(x) {
-// 		this.rating = x;
-// 	}
-// 	set gamesPlayed(x) {
-// 		this.gamesPlayed = x;
-// 	}
-// 	set kFactor(x) {
-// 		this.kFactor = x;
-// 	}
-// 	set wPerc(x) {
-// 		this.wPerc = x;
-// 	}
-// 	set image(x) {
-// 		this.image = x;
-// 	}
+	set rating(x) {
+		this._rating = x;
+	}
+	set gamesPlayed(x) {
+		this._gamesPlayed = x;
+	}
+	set kFactor(x) {
+		this._kFactor = x;
+	}
+	set wPerc(x) {
+		this._wPerc = x;
+	}
+	set image(x) {
+		this._image = x;
+	}
 }
 
 var dog = new Dog(1500, 10, 30, 0.8, "/images/dog1.jpeg");
