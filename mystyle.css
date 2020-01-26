@@ -35,7 +35,7 @@ li {
     background-size: cover;
     width: 50%;
     height: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 20%;
 }
 #right-image {
     float: right;
@@ -44,7 +44,7 @@ li {
     background-size: cover;
     width: 50%;
     height: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 20%;
 }
 #vs {
     display: inline;
