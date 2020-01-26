@@ -47,10 +47,10 @@ window.addEventListener('load', function() {
 		document.getElementById("right-image").innerHTML = dog2.rating;
 	    setTimeout(function () {
 			setTimeout(function () {
-				document.getElementById("left-image").innerHTML = calculate(true, dog.rating, dog2.rating);
-				document.getElementById("right-image").innerHTML = calculate(true, dog2.rating, dog.rating);
+				document.getElementById("left-image").innerHTML = calculate(dog.rating, dog2.rating, true);
+				document.getElementById("right-image").innerHTML = calculate(dog2.rating, dog.rating, true);
 				setTimeout(function () {
-					loadNewMatchup(true);
+					loadNewMatchup(true
 				}, 1000)
 			}, 1000)
 	    }, 1000)
@@ -64,20 +64,20 @@ window.addEventListener('load', function() {
 });
 
 
-function calculate(bool, dog, dog2) {
-    return dog.getRating() - 15;
+function calculate(left, right, bool) {
+    return left - 15;
 }
 function loadNewMatchup(bool) {
 	document.getElementById("left-image").style.backgroundImage = "url('/images/dog2.jpeg')";
 }
-function probability(oppRating){
-	return 1.0/(1.0 + Math.pow(10, (oppRating - this.rating)/400));
+function probability(curr, opp){
+	return 1.0/(1.0 + Math.pow(10, (opp - curr)/400));
 }
-function newRating(oppRating, bool){
+function newRating(curr, opp, kFactor, bool){
 	if (bool) {
-		return this.rating +(1 - probability(oppRating)) * kFactor;
+		return curr + (1 - probability(opp)) * kFactor;
 	} else {
-		return this.rating + (-1 * probability(oppRating)) * kFactor
+		return curr + (-1 * probability(opp)) * kFactor
 	}
 }
 function getK(rating, gamesPlayed, wPerc){
