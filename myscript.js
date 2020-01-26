@@ -21,6 +21,21 @@ class Dog {
 	get image() {
 		return this.image;
 	}
+	set rating(rating) {
+		this.rating = rating;
+	}
+	set gamesPlayed(games) {
+		this.gamesPlayed = games;
+	}
+	set kFactor(k) {
+		this.kFactor = k;
+	}
+	set wPerc(per) {
+		this.wPerc = per;
+	}
+	set image(text) {
+		this.image = text;
+	}
 }
 var dog = new Dog(1500, 10, 30, 0.8, "/images/dog1.jpeg");
 // var dog = {
