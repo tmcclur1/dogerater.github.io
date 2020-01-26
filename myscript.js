@@ -1,14 +1,36 @@
+var dog = {
+    image: "/images/dog1.jpeg",
+    kValue: 30, //add ½ and floor it in order to get the lowest integer
+    id: 12345678,
+    eLO: 1500,
+	gamesPlayed: 10,
+	wPerc: 0.8,
+}
+var dog2 = {
+    image: "/images/dog2.jpeg",
+    kValue: 25, //add ½ and floor it in order to get the lowest integer
+    id: 12345679,
+    eLO: 1200,
+	gamesPlayed: 4,
+	wPerc: 0.8,
+}
+function calculate(bool, idLeft, idRight) {
+    return idLeft;
+}
+
 window.addEventListener('load', function() {
     document.getElementById("left-image").onclick = function(event) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            // Typical action to be performed when the document is ready:
-            document.getElementById("demo").innerHTML = xhttp.responseText; // not helpful code
-            }
-        };
-        xhttp.open("POST", "_ah/api/handleClick", true);
-        xhttp.send();
+        funtion handleCLick() {
+            document.getElementById("left-image").innerHTML = dog.ELO;
+            setTimeout(function () {
+                setTimeout(function () {
+                    console.log(calculate(true, dog.id, dog2.id))
+                    setTimeout(function () {
+                        console.log('3')
+                    }, 1000)
+                }, 1000)
+            }, 1000)
+        }
     };
 });
 
