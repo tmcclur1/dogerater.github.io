@@ -50,7 +50,7 @@ window.addEventListener('load', function() {
 				document.getElementById("left-image").innerHTML = calculate(dog.rating, dog2.rating, true);
 				document.getElementById("right-image").innerHTML = calculate(dog2.rating, dog.rating, true);
 				setTimeout(function () {
-					loadNewMatchup(true
+					loadNewMatchup(true)
 				}, 1000)
 			}, 1000)
 	    }, 1000)
